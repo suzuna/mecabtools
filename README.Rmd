@@ -18,9 +18,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Tools of useful functions that return tidy text data.frame and make "wakatigaki" to a text from RMeCab.
+Collection of useful functions that return tidy text data.frame and make "wakatigaki" to text from RMeCab.
 
-RMeCabによる形態素解析の結果をtidy textなdata.frameで返す関数と、分かち書きをする関数が含まれます。
+RMeCabによる形態素解析の結果をtidy textなdata.frameで返す関数と、分かち書きをする関数が含まれます。RMeCabで形態素解析を行い、出力を整形しています。
 
 ## インストール
 

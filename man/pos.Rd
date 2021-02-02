@@ -2,7 +2,7 @@
 % Please edit documentation in R/pos.R
 \name{pos}
 \alias{pos}
-\title{Return surface and pos results of MeCab by tibble}
+\title{Return surface and pos results of MeCab by data.frame}
 \usage{
 pos(text, id_name = "id", dic = "", etc = "")
 }
@@ -19,7 +19,7 @@ pos(text, id_name = "id", dic = "", etc = "")
 data.frame.
 }
 \description{
-Return surface and pos results of MeCab by tibble
+Return surface and pos results of MeCab by data.frame
 }
 \examples{
 \dontrun{

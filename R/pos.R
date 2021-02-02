@@ -42,7 +42,7 @@ pos_full <- function(text,id_name="id",dic="",etc=""){
 
 
 
-#' Return surface and pos results of MeCab by tibble
+#' Return surface and pos results of MeCab by data.frame
 
 #' @param text character vector.
 #' @param id_name character. a name of a sentence id column.

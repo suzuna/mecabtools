@@ -2,7 +2,7 @@
 % Please edit documentation in R/wakati.R
 \name{wakati}
 \alias{wakati}
-\title{Make "wakatigaki" to a text}
+\title{Make "wakatigaki" to text}
 \usage{
 wakati(text, collapse = " ", dic = "", etc = "")
 }
@@ -19,7 +19,7 @@ wakati(text, collapse = " ", dic = "", etc = "")
 character vector.
 }
 \description{
-Make "wakatigaki" to a text
+Make "wakatigaki" to text
 }
 \examples{
 \dontrun{

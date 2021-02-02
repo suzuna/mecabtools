@@ -1,4 +1,4 @@
-#' Make "wakatigaki" to a text
+#' Make "wakatigaki" to text
 
 #' @param text character vector.
 #' @param collapse character. string to insert between each morphemes.
