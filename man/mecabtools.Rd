@@ -5,5 +5,5 @@
 \alias{mecabtools}
 \title{mecabtools}
 \description{
-Tools of useful functions of MeCab and RMeCab.
+Collection of useful functions of MeCab and RMeCab.
 }

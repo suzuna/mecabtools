@@ -1,9 +1,9 @@
 Package: mecabtools
 Type: Package
-Title: Tools of Useful Functions of MeCab and RMeCab
+Title: Collection of Useful Functions of MeCab and RMeCab
 Version: 0.1.0
 Author@R: person("suzuna",role=c("aut","cre"))
-Description: Tools of useful functions that return tidy text data.frame and make "wakatigaki" to a text from RMeCab.
+Description: Collection of useful functions that return tidy text data.frame and make "wakatigaki" to a text from RMeCab.
 Depends: R (>= 4.0.0)
 Imports: 
     purrr,

@@ -62,7 +62,7 @@ mecabtools::pos_full(text,id_name="id")
 
 ### pos
 
-pos\_fullのうち、形態素と品詞のみを返します。
+pos\_fullのうち、表層形と品詞のみを返します。
 
 ``` r
 mecabtools::pos(text,id_name="id")
