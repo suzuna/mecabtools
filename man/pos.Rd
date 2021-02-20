@@ -2,12 +2,14 @@
 % Please edit documentation in R/pos.R
 \name{pos}
 \alias{pos}
-\title{Return surface and pos results of MeCab by data.frame}
+\title{Return pos results of MeCab by data.frame}
 \usage{
-pos(text, id_name = "id", dic = "", etc = "")
+pos(text, type = c("surface", "base"), id_name = "id", dic = "", etc = "")
 }
 \arguments{
 \item{text}{character vector.}
+
+\item{type}{character. either "surface" or "base".}
 
 \item{id_name}{character. a name of a sentence id column.}
 
@@ -19,10 +21,10 @@ pos(text, id_name = "id", dic = "", etc = "")
 data.frame.
 }
 \description{
-Return surface and pos results of MeCab by data.frame
+pos() can return either surface form or base form of word and its pos information.
 }
 \examples{
 \dontrun{
-pos(text,id_name="id",dic="",etc="")
+pos(text,type="surface",id_name="id",dic="",etc="")
 }
 }

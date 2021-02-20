@@ -63,22 +63,24 @@ mecabtools::pos_full(text,id_name="id")
 
 ### pos
 
-pos\_fullのうち、表層形と品詞のみを返します。
+pos\_fullのうち、表層形か原形のどちらかと、その品詞のみを返します。
+
+引数typeを“surface”にすると表層形を、“base”にすると原形を返します。
 
 ``` r
-mecabtools::pos(text,id_name="id")
-#>    id surface    pos
-#> 1   1    吾輩   名詞
-#> 2   1      は   助詞
-#> 3   1      猫   名詞
-#> 4   1      で 助動詞
-#> 5   1    ある 助動詞
-#> 6   1      。   記号
-#> 7   2    名前   名詞
-#> 8   2      は   助詞
-#> 9   2    まだ   副詞
-#> 10  2    ない 形容詞
-#> 11  2      。   記号
+mecabtools::pos(text,type="surface",id_name="id")
+#>    id word    pos
+#> 1   1 吾輩   名詞
+#> 2   1   は   助詞
+#> 3   1   猫   名詞
+#> 4   1   で 助動詞
+#> 5   1 ある 助動詞
+#> 6   1   。   記号
+#> 7   2 名前   名詞
+#> 8   2   は   助詞
+#> 9   2 まだ   副詞
+#> 10  2 ない 形容詞
+#> 11  2   。   記号
 ```
 
 ### wakati

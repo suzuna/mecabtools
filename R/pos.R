@@ -42,9 +42,12 @@ pos_full <- function(text,id_name="id",dic="",etc=""){
 
 
 
-#' Return surface and pos results of MeCab by data.frame
+#' Return pos results of MeCab by data.frame
+#'
+#' pos() can return either surface form or base form of word and its pos information.
 
 #' @param text character vector.
+#' @param type character. either "surface" or "base".
 #' @param id_name character. a name of a sentence id column.
 #' @param dic character. a path to a user dictionary.
 #' @param etc character. options to mecab.
@@ -58,15 +61,21 @@ pos_full <- function(text,id_name="id",dic="",etc=""){
 #'
 #' @examples
 #' \dontrun{
-#' pos(text,id_name="id",dic="",etc="")
+#' pos(text,type="surface",id_name="id",dic="",etc="")
 #' }
 #' @export
-pos <- function(text,id_name="id",dic="",etc=""){
+pos <- function(text,type=c("surface","base"),id_name="id",dic="",etc=""){
+  type <- match.arg(type)
+  mypref <- switch(
+    type,
+    "surface"=0,
+    "base"=1
+  )
   res <- text %>%
     map(function(x){
-      mecab_raw <- RMeCabC(x,mypref=0,dic=dic,etc=etc)
+      mecab_raw <- RMeCabC(x,mypref=mypref,dic=dic,etc=etc)
       mecab_vec <- flatten_chr(mecab_raw)
-      mecab_df <- data.frame(surface=mecab_vec,pos=names(mecab_vec))
+      mecab_df <- data.frame(word=mecab_vec,pos=names(mecab_vec))
       return(mecab_df)
     }) %>%
     enframe(name=id_name,value="value") %>%

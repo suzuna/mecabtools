@@ -48,10 +48,12 @@ mecabtools::pos_full(text,id_name="id")
 
 ### pos
 
-pos_fullのうち、表層形と品詞のみを返します。
+pos_fullのうち、表層形か原形のどちらかと、その品詞のみを返します。
+
+引数typeを"surface"にすると表層形を、"base"にすると原形を返します。
 
 ```{r}
-mecabtools::pos(text,id_name="id")
+mecabtools::pos(text,type="surface",id_name="id")
 ```
 
 ### wakati
