@@ -65,7 +65,7 @@ mecabtools::pos_full(text,id_name="id")
 
 pos\_fullのうち、表層形か原形のどちらかと、その品詞のみを返します。
 
-引数typeを“surface”にすると表層形を、“base”にすると原形を返します。
+返り値のdata.frameのword列は、引数typeが“surface”の場合は表層形、“base”の場合は原形となります。
 
 ``` r
 mecabtools::pos(text,type="surface",id_name="id")
