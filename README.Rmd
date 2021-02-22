@@ -40,7 +40,12 @@ text <- c("吾輩は猫である。","名前はまだない。")
 
 MeCabの全ての出力結果（表層形、品詞、品詞細分類1、品詞細分類2、品詞細分類3、活用形1、活用形2、原形、読み、発音）をdata.frameで返します。
 
-id_nameは、文章のIDの列名です。
+引数は以下の通りです。
+
+- text: 形態素解析を行いたい文章です。ベクトルも可能です。
+- id_name: 返り値のdata.frameの文章ID列の名前です。NULLを指定すると文章ID列を出力しません。
+- dic: MeCabのユーザー辞書のファイルパスです。
+- etc: MeCabに渡したい他のオプションです。
 
 ```{r}
 mecabtools::pos_full(text,id_name="id")
@@ -50,7 +55,13 @@ mecabtools::pos_full(text,id_name="id")
 
 pos_fullのうち、表層形か原形のどちらかと、その品詞のみを返します。
 
-返り値のdata.frameのword列は、引数typeが"surface"の場合は表層形、"base"の場合は原形です。
+引数は以下の通りです。
+
+- text: 形態素解析を行いたい文章です。ベクトルも可能です。
+- type: "surface"の場合は表層形、"base"の場合は原形を、返り値のdata.frameのword列に出力します。
+- id_name: 返り値のdata.frameの文章ID列の名前です。NULLを指定すると文章ID列を出力しません。
+- dic: MeCabのユーザー辞書のファイルパスです。
+- etc: MeCabに渡したい他のオプションです。
 
 ```{r}
 mecabtools::pos(text,type="surface",id_name="id")
@@ -58,7 +69,14 @@ mecabtools::pos(text,type="surface",id_name="id")
 
 ### wakati
 
-分かち書きをします。collapseで与えた文字列を挿入します。
+分かち書きをします。
+
+引数は以下の通りです。
+
+- text: 形態素解析を行いたい文章です。ベクトルも可能です。
+- collapse: 分かち書きの際に挿入する文字列です。
+- dic: MeCabのユーザー辞書のファイルパスです。
+- etc: MeCabに渡したい他のオプションです。
 
 ```{r}
 mecabtools::wakati(text,collapse=" ")
