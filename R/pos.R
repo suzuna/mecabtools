@@ -1,7 +1,7 @@
 #' Return raw results of MeCab by data.frame
 
 #' @param text character vector.
-#' @param id_name character. a name of a sentence id column.
+#' @param id_name character or NULL. a name of a sentence id column. If NULL, id column is not made.
 #' @param dic character. a path to a user dictionary.
 #' @param etc character. options to mecab.
 #' @return data.frame.
@@ -48,7 +48,7 @@ pos_full <- function(text,id_name="id",dic="",etc=""){
 
 #' @param text character vector.
 #' @param type character. either "surface" or "base".
-#' @param id_name character. a name of a sentence id column.
+#' @param id_name character or NULL. a name of a sentence id column. If NULL, id column is not made.
 #' @param dic character. a path to a user dictionary.
 #' @param etc character. options to mecab.
 #' @return data.frame.

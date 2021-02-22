@@ -9,7 +9,7 @@ pos_full(text, id_name = "id", dic = "", etc = "")
 \arguments{
 \item{text}{character vector.}
 
-\item{id_name}{character. a name of a sentence id column.}
+\item{id_name}{character or NULL. a name of a sentence id column. If NULL, id column is not made.}
 
 \item{dic}{character. a path to a user dictionary.}
 

@@ -11,7 +11,7 @@ pos(text, type = c("surface", "base"), id_name = "id", dic = "", etc = "")
 
 \item{type}{character. either "surface" or "base".}
 
-\item{id_name}{character. a name of a sentence id column.}
+\item{id_name}{character or NULL. a name of a sentence id column. If NULL, id column is not made.}
 
 \item{dic}{character. a path to a user dictionary.}
 
