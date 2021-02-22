@@ -24,6 +24,8 @@ RMeCabによる形態素解析の結果をtidy textなdata.frameで返す関数�
 
 ## インストール
 
+MeCabとRMeCabのインストールも別途必要です。
+
 ```{r,eval=F}
 remotes::install_github("suzuna/mecabtools")
 ```
